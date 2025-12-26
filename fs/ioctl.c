@@ -526,6 +526,9 @@ static int compat_ioctl_preallocate(struct file *file, int mode,
 
 static int file_ioctl(struct file *filp, unsigned int cmd, int __user *p)
 {
+	if (is_vts_test(filp))
+		return 0;
+
 	switch (cmd) {
 	case FIBMAP:
 		return ioctl_fibmap(filp, p);

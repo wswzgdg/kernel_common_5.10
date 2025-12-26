@@ -667,5 +667,4 @@ struct migration_target_control {
 	nodemask_t *nmask;
 	gfp_t gfp_mask;
 };
-
 #endif	/* __MM_INTERNAL_H */
