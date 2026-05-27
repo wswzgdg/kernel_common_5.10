@@ -5690,7 +5690,7 @@ static int reserve_compress_blocks(struct dnode_of_data *dn, pgoff_t count)
 
 		/* for the case all blocks in cluster were reserved */
 
-		ret = inc_valid_block_count(sbi, dn->inode, &reserved);
+		ret = inc_valid_block_count(sbi, dn->inode, &reserved, false);
 		if (ret)
 			return ret;
 

@@ -5096,6 +5096,8 @@ static inline void f2fs_set_lookup_mode(struct f2fs_sb_info *sbi,
 {
 	F2FS_OPTION(sbi).alloc_mode &= ~LOOKUP_MODE_MASK;
 	F2FS_OPTION(sbi).alloc_mode |= (mode << LOOKUP_MODE_SHIFT);
+}
+
 static inline void f2fs_truncate_meta_inode_pages(struct f2fs_sb_info *sbi,
 					block_t blkaddr, unsigned int cnt)
 {
